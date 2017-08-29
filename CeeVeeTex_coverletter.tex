@@ -1,0 +1,62 @@
+% Massimo Zannoni - Curriculum Vitae
+%
+% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
+
+\documentclass[a4paper]{letter}
+%\usepackage{graphicx}
+\usepackage[top=2.4cm, bottom=2.4cm, left=2cm, right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+
+%% set the font family
+\usepackage[condensed,math]{kurier}
+%% set the font encoding
+\usepackage[T1]{fontenc}
+%% details about the font
+%% https://ctan.org/tex-archive/fonts/kurier/
+
+% Personal details
+\def\name{Name Surname}
+\def\email{yourmail@goeshere.com}
+\def\telephone{+00 11 22 33 44}
+\def\nationality{Italian}
+\def\dateofbirth{31.12.2020}
+\def\gender{Male}
+\def\addrs{Mystreet, 1 \\ 0123 MyCity \\ MyCountry}
+
+% Addressee details
+\def\company{Target Company}
+\def\recruiter{The Recruiter}
+\def\companyaddress{Somestreet, 1 \newline 0000 City \newline Country}
+
+% Edit PDF file properties
+\hypersetup{
+  pdfauthor = {\name},
+  pdfcreator = {\name},
+  pdfkeywords = {personal_skill_01, personal_skill_02, personal_interest_01, etc},
+  pdftitle = {\name ~- Cover Letter},
+  pdfsubject = {Cover Letter},
+  % next line to avoid links from being blue and underlined
+  hidelinks
+}
+
+% Letter commands
+\signature{\name}
+\address{\addrs}
+
+\begin{document}
+  %\begin{letter}{\recruiter \newline \company \newline \companyaddress}
+  \begin{letter}{}
+
+  \opening{To the kind attention of \recruiter ~in \company}
+
+  Here you would have to write your cover letter. It's not the scope of this template to give any indication on the conent nor the style.\\
+  I'm also not the right person to give such kind of hints, I believe.\\
+  You will find around plenty of guides, howtos and tutorials on what to write in a cover letter, how to write it, who to address and so on.\\
+  The content and the style are also highly dependent on the specific field.\\
+
+  \closing{Sincerely,}
+
+  \end{letter}
+\end{document}

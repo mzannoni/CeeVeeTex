@@ -1,0 +1,122 @@
+% Europass CV
+% Massimo Zannoni
+% This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
+
+\documentclass[a4paper,helvetica,narrow,english,totpages]{europecv}
+\usepackage{graphicx}
+\usepackage[top=2.4cm, bottom=2.4cm, left=2cm, right=1.6cm]{geometry}
+\usepackage{hyperref}
+
+%next 2 lines to avoid vertical separation before an itemize section
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\def\name{Name}
+\def\surname{Surname}
+
+\hypersetup{
+  pdfauthor = {\name \surname},
+  pdfcreator = {\name \surname},
+  pdfkeywords = {personal_skill_01, personal_skill_02, personal_interest_01, etc},
+  pdftitle = {\name \surname: Europass Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  hidelinks
+}
+
+\ecvname{\surname, \name}
+\ecvfootername{Name Surname}
+\ecvdateofbirth{31.12.2020}
+\ecvnationality{Italian}
+\ecvgender{Male}
+\ecvaddress{Mystreet, 1 \newline
+            0123 MyCity \newline
+            MyCountry}
+\ecvtelephone{+00 11 22 33 44}
+\ecvemail{yourmail@goeshere.com}
+\ecvbeforepicture{\ecvspace{-2cm}\center}
+\ecvpicture[height=3cm]{pics/portrait.jpg}
+\ecvafterpicture{\ecvspace{-2.8cm}}
+
+\begin{document}
+  \begin{europecv}
+    \ecvpersonalinfo
+
+    \ecvsection{Work Experience}
+
+    \ecvitem{Dates}{2056 - current}
+    \ecvitem{Occupation or position held}{Position X}
+    \ecvitem{Main activities and responsibilities}{Activity 1, Activity 2, Responsibility 1, Responsibility 2}
+    \ecvitem{Name and address of employer}{Company X, Address X, 0001 CityX, StateX}
+    \ecvitem[0.25cm]{Type of business or sector}{Field of Company X}
+
+    \ecvitem{Dates}{2050 – 2056}
+    \ecvitem{Occupation or position held}{Position Y}
+    \ecvitem{Main activities and responsibilities}{Activity 1, Activity 2}
+    \ecvitem{Name and address of employer}{Company Y, Address Y, 0002 CityY, StateY}
+    \ecvitem[0.25cm]{Type of business or sector}{Field of Company Y}
+
+    % \ecvitem{Dates}{2045 – 2050}
+    % \ecvitem{Occupation or position held}{Position Z}
+    % \ecvitem{Main activities and responsibilities}{Activity 1, Responsibility 1}
+    % \ecvitem{Name and address of employer}{Company Z, Address Z, 0003 CityZ, StateZ}
+    % \ecvitem[0.25cm]{Type of business or sector}{Field of Company Z}
+
+
+    \ecvsection{Education and training}
+
+    \ecvitem{Dates}{2043 – 2045}
+    \ecvitem{Title of qualification awarded}{MSc in This Discipline}
+    \ecvitem{Principal subjects/occupational skills covered}{Field of Study 1, Field of Study 2\newline
+                                                             Grade: x/y}
+    \ecvitem[0.25cm]{Name and type of organisation providing education and training}{University X, Faculty of This Discipline}
+
+    \ecvitem{Dates}{2040 – 2043}
+    \ecvitem{Title of qualification awarded}{BSc in That Discipline}
+    \ecvitem{Principal subjects/occupational skills covered}{Field of Study 1, Field of Study 2\newline
+                                                             Grade: x/y}
+    \ecvitem[0.25cm]{Name and type of organisation providing education and training}{University Y, Faculty of That Discipline}
+
+
+    \ecvsection{Personal skills and competences}
+
+    \ecvmothertongue[0.25cm]{Italian}
+    \ecvlanguageheader{(*)}
+    \ecvlanguage{English}{\ecvCOne}{\ecvCTwo}{\ecvCOne}{\ecvCOne}{\ecvCTwo}
+    \ecvlanguage{German}{\ecvBOne}{\ecvBTwo}{\ecvBOne}{\ecvBOne}{\ecvBOne}
+    \ecvlanguagefooter[0.75cm]{(*)}
+
+    \ecvitem[0.75cm]{\bf Technical skills and competences}{\begin{itemize} \itemsep1pt \parskip0pt \parsep0pt
+                                                     \item Technical Skill X
+                                                     \item Social Competence Y
+                                                     \item Managerial Skill Z
+                                                     \item Special Competence W
+                                                   \end{itemize}}
+
+    \ecvitem{\bf Computer skills and competences}{}
+    \ecvitem{Electronic CAD}{Cadence DFII (Virtuoso, Spectre), SPICE, Cadence OrCAD (PSpice), Cadence SoC Encounter, Agilent ADS}
+    \ecvitem{Programming and coding}{Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog, {\fontfamily{cmr}\selectfont\LaTeX}}
+    \ecvitem{Version control}{Subversion, Git}
+    \ecvitem[1cm]{Operating systems}{Linux: very good knowledge\newline
+                                     Windows: good knowledge}
+
+    \ecvitem[0.25cm]{\bf Organizational skills and competences}{-- special organizational experience X\newline
+                                                                -- remarkable social experience Y\newline}
+
+    \ecvitem[0.25cm]{\bf Social skills and competences}{-- Sport player in this team\newline
+                                                        -- Teaching activity to this group}
+
+
+    \ecvitem[0.25cm]{\bf Other skills and competences}{Amateur Skill 1\newline
+                                                  Hobby Competence 2}
+
+    \ecvitem[0.25cm]{\bf Driving License}{Driving license: Category X}
+
+    \ecvitem[0.25cm]{\bf Additional information}{Personal interests:\newline
+                                             -- Blue skies\newline
+                                             -- Sweet fruits}
+
+    \ecvitem[0.25cm]{\bf Annexes}{Appendix including some more boring specs}
+
+
+  \end{europecv}
+\end{document}
