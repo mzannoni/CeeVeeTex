@@ -37,6 +37,8 @@
 % Define some lengths used in the document
 \newlength{\sectsep}
 \setlength{\sectsep}{0.6cm}
+\newlength{\subsectsep}
+\setlength{\subsectsep}{0.4cm}
 \newlength{\detsep}
 \setlength{\detsep}{0.4cm}
 
@@ -104,7 +106,7 @@
     \end{minipage} \\
   \hline \hline
 
-  %2nd row: Working experience
+  %2nd row: Working experience 1
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Working Experience}
@@ -127,7 +129,11 @@
           \item Key Responsibility 1
           \item Key Responsibility 2
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %3rd row: Working experience 2
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Position Y}
       \headerrow
   		{\textbf{Company Y}}{\emph{2050 - 2056}}
@@ -142,7 +148,11 @@
           \item Activity 1
           \item Activity 2
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %4th row: Working experience 3
+  % & \begin{minipage}{0.9\textwidth}
+  %     \vspace{\sectsep}
     %   \subsubsection*{Position Z}
     %   \headerrow
  %  		{\textbf{Company Z}}{\emph{2045 - 2050}}
@@ -157,9 +167,9 @@
     % %       \item Key Responsibility 1
     % %       \item Key Responsibility 2
     % %   \end{itemize}
-  \end{minipage} \\[\sectsep]
+  % \end{minipage} \\[\sectsep]
 
-  %3th row: Education
+  %5th row: Education 1
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Education}
@@ -177,7 +187,11 @@
           \item Thesis: \emph{Something really difficult}
           \item Grade: x/y
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %6th row: Education 2
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{BSc in That Discipline}
       \headerrow
   		{\textbf{University Y}}{\emph{2040 - 2043}}
@@ -193,11 +207,11 @@
           \item Grade: x/y
       \end{itemize}
       \vfill
-  \end{minipage} \\
+  \end{minipage} \\[\sectsep]
 
-  %4th row: Other skills and competences
+  %7th row: Personal skills and competences
   & \begin{minipage}{0.9\textwidth}
-      \vspace{0.2\sectsep}
+      \vspace{\sectsep}
       \subsection*{Personal Skills and Competences}
       \subsubsection*{Languages}
       \begin{tabular}{rl}
@@ -206,7 +220,11 @@
         \textbf{German:}&Beginner/Intermediate\\
       \end{tabular} \vspace{1.5ex} \\
       %\hspace*{0.5em} {\footnotesize \emph{See Common European Framework (CEF) self-assessment table in the appendix.}}
+    \end{minipage} \\[\sectsep]
 
+  %8th row: Technical skills and competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Technical Skills and Competences}
       \begin{itemize}
           \item Technical Skill X
@@ -214,7 +232,11 @@
           \item Managerial Skill Z
           \item Special Competence W
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %9th row: Computer skills and competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Computer Skills and Competences}
       \begin{tabular*}{\textwidth}{r p{0.75\textwidth}}
         Operating Systems:&{Linux: very good knowledge\newline Microsoft Windows: good knowledge}\\[0.5ex]
@@ -222,20 +244,32 @@
         Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{cmr}\selectfont\LaTeX}\\[0.5ex]
         Version Control:&Subversion, Git
       \end{tabular*}\\
+  \end{minipage} \\[\sectsep]
 
+  %10th row: Other skills and competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Other Skills and Competences}
       \begin{itemize}
           \item Amateur Skill 1
           \item Hobby Competence 2
           \item Driving License: Category X
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %11th row: Personal Interests
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Personal Interests}
       \begin{itemize}
           \item Blue skies
           \item Sweet fruits
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %12th row: Annexes
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Annexes}
       \begin{itemize}
           \item Appendix including some more boring specs

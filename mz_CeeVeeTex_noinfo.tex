@@ -32,11 +32,14 @@
 \def\nazionalita{Italian}
 \def\datadinascita{00.00.1900}
 \def\genere{Male}
-\def\indirizzo{Funnystreet, 1 \newline 0000 Zürich \newline CH}
+\def\indirizzo{Squarestreet, 1 \newline 0000 Zürich \newline CH}
+\def\sito{https://www.fotobill.com}
 
 % Define some lengths used in the document
 \newlength{\sectsep}
 \setlength{\sectsep}{0.6cm}
+\newlength{\subsectsep}
+\setlength{\subsectsep}{0.4cm}
 \newlength{\detsep}
 \setlength{\detsep}{0.4cm}
 
@@ -44,7 +47,7 @@
 \hypersetup{
   pdfauthor = {\nome},
   pdfcreator = {\nome},
-  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, engineering},
+  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, image sensors, engineering},
   pdftitle = {\nome ~- Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   % next line to avoid links from being blue and underlined
@@ -104,10 +107,33 @@
     \end{minipage} \\
   \hline \hline
 
-  %2nd row: Working experience
+  %2nd row: Working experience 1
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Working Experience}
+      \subsubsection*{Analog Design Engineer}
+      \headerrow
+  		{\textbf{Insightness AG}}{\emph{2017 - current}}
+      \\
+      \headerrow
+        {\emph{Max-Högger-Strasse 6, 8048 Zürich, CH}}{}
+      \\
+      \headerrow
+        {Image Sensors / Computer Vision}{}
+
+      \begin{itemize}
+          \item Analog IC design in CMOS technology
+          \begin{itemize2}
+              \item Event-Based Image Sensor
+          \end{itemize2}
+          \item Optical and electrical characterization
+          \item IT and network infrastructure maintenance
+      \end{itemize}
+  \end{minipage} \\[\sectsep]
+
+  %3nd row: Working experience 2
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Design Engineer}
       \headerrow
   		{\textbf{GigOptix-Helix AG} (subsidiary of GigPeak, Inc.)}{\emph{2013 - current}}
@@ -124,11 +150,13 @@
               \item 28 Gbit/s TIA receivers and VCSEL drivers
           \end{itemize2}
           \item RF and optical measurement
-          \item Customer support and RMA analysis
-          \item Production support
-          \item IT and network infrastructure maintenance
+          \item Customer support, production support and RMA analysis
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %4rd row: Working experience 3
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Thesis Worker}
       \headerrow
   		{\textbf{ABB AB Corporate Research Center}}{\emph{July 2012 - December 2012}}
@@ -143,23 +171,9 @@
           \item Semiconductor device modeling
           \item Power Electronics
       \end{itemize}
-
-    %   \subsubsection*{Worker}
-    %   \headerrow
- %  		{\textbf{Rodolfi Mansueto Spa}}{\emph{2004 - 2011}}
-    %   \\
-    %   \headerrow
-    %     {\emph{Strada Qualatico 14, 43044 Ozzano Taro, PR, Italy}}{\emph{(2 months every summer)}}
-    %   \\
-    %   \headerrow
-    %       {Food processing}{}
-    %
-    % %   \begin{itemize}
-    % %       \item Responsible for a sterilization plant
-    % %   \end{itemize}
   \end{minipage} \\[\sectsep]
 
-  %3th row: Education
+  %5th row: Education 1
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Education}
@@ -177,7 +191,11 @@
           \item Thesis: \emph{PSpice Modeling of 4.5 kV StakPak\textsuperscript{TM} Modules}
           \item Grade: 107/110
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %6th row: Education 2
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{BSc in Electronic Engineering}
       \headerrow
   		{\textbf{Università degli Studi di Parma, Italy}}{\emph{2005 - 2009}}
@@ -193,11 +211,11 @@
           \item Grade: 108/110
       \end{itemize}
       \vfill
-  \end{minipage} \\
+  \end{minipage} \\[\sectsep]
 
-  %4th row: Other skills and competences
+  %7th row: Personal skills and competences
   & \begin{minipage}{0.9\textwidth}
-      \vspace{0.2\sectsep}
+      \vspace{\sectsep}
       \subsection*{Personal Skills and Competences}
       \subsubsection*{Languages}
       \begin{tabular}{rl}
@@ -206,7 +224,11 @@
         \textbf{German:}&Beginner/Intermediate\\
       \end{tabular} \vspace{1.5ex} \\
       \hspace*{0.5em} {\footnotesize \emph{See Common European Framework (CEF) self-assessment table in the appendix.}}
+    \end{minipage} \\[\sectsep]
 
+  %8th row: Technical skills and competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Technical Skills and Competences}
       \begin{itemize}
           \item Analog IC Design
@@ -219,7 +241,11 @@
           \item Clearly describe design issues before organization employees
           \item Hand-working: good familiarity with tools and instruments for building electronic systems; basic skills in the use of main mechanic hand and power tools
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %9th row: Computer skills and competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Computer Skills and Competences}
       \begin{tabular*}{\textwidth}{r p{0.75\textwidth}}
         Operating Systems:&{Linux: very good knowledge\newline Microsoft Windows: good knowledge}\\[0.5ex]
@@ -227,33 +253,50 @@
         Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{cmr}\selectfont\LaTeX}\\[0.5ex]
         Version Control:&Subversion, ClioSoft SOS
       \end{tabular*}\\
+  \end{minipage} \\[\sectsep]
 
+  %10th row: Organizational and Social Competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Organizational and Social Competences}
       \begin{itemize}
           \item 2009-2012: responsible for design and realization of the electrical system of the racing car in the \emph{Formula SAE} (Formula Student) team of the University of Parma
           \item 4 years experience as executive in a volleyball sport association
-          \item Occasional collaboration with a cooperative, named \emph{Lune Nuove}, in Parma, organizing cultural events, as assistant in logistics
-          \item Volleyball player for 12 years, then Ultimate Frisbee player until present day
           \item Teaching and organizing experience in a course of basic computer ability
       \end{itemize}
+  \end{minipage} \\[\sectsep]
+
+  %11th row: Other skills and competences
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Other Skills and Competences}
       \begin{itemize}
           \item Good photo-editing and computer drawing skills
           \item Basic sound engineering skills
           \item Swiss Driving License: Category A and B
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %12th row: Personal Interests
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Personal Interests}
       \begin{itemize}
           \item Love for traveling
           \item Photography
+          \item Ultimate Frisbee
           \item Guitar player (formerly in an amateur rock band)
       \end{itemize}
+  \end{minipage} \\[\sectsep]
 
+  %13th row: Annexes
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Annexes}
       \begin{itemize}
           \item Appendix including publications, references and main projects developed during studies
           \item Reference letter by former manager available upon request
+          \item Personal website: \href{\sito}{\sito}
       \end{itemize}
       \vfill
     \end{minipage} \\
