@@ -1,6 +1,12 @@
+# Latex generated files
 *.aux
 *.fdb_latexmk
 *fls
 *.log
 *.out
 *.synctex.gz
+
+# Logo folders
+pics/github-mark
+pics/gitlab-logo
+pics/linkedin-logo
