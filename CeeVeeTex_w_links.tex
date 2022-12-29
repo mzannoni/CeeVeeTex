@@ -26,21 +26,24 @@
 %\setlist{nolistsep}
 
 % Personal details
-\def\nome{Massimo Zannoni}
-\def\email{myemail@someservice.abc}
-\def\telefono{+00 11 22 33 44}
-\def\nazionalita{Italian}
-\def\datadinascita{00.00.1900}
-\def\genere{Male}
-\def\indirizzo{Squarestreet, 1 \newline 0000 Zürich \newline CH}
-\def\sito{https://www.fotobill.com}
+\def\name{Name Surname}
+\def\email{yourmail@goeshere.com}
+\def\telephone{+00 11 22 33 44}
+\def\nationality{Italian}
+\def\dateofbirth{31.12.2020}
+\def\gender{Male}
+\def\address{Mystreet, 1 \newline 0123 MyCity \newline MyCountry}
 
 % Web links and logos
-\def\githublink{https://github.com/mzannoni}
-\def\gitlablink{https://gitlab.com/mzannoni}
-\def\linkedinlink{https://www.linkedin.com/in/mzannoni}
+\def\githublink{https://github.com}
+\def\gitlablink{https://gitlab.com}
+\def\linkedinlink{https://linkedin.com}
+% Official logos are not included in the repo, they can be found at the following links:
+% GitHub: https://github.com/logos
 \def\githublogo{pics/github-mark/github-mark.png}
+% GitLab: https://about.gitlab.com/press/press-kit/#logos-rgb
 \def\gitlablogo{pics/gitlab-logo/gitlab-logo-600.png}
+% LinkedIn: https://brand.linkedin.com/downloads (black version created according to LinkedIn Logo Guidelines)
 \def\linkedinlogo{pics/linkedin-logo/LI-In-Bug-black.png}
 
 % Define some lengths used in the document
@@ -53,10 +56,10 @@
 
 % Edit PDF file properties
 \hypersetup{
-  pdfauthor = {\nome},
-  pdfcreator = {\nome},
-  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, image sensors, engineering},
-  pdftitle = {\nome ~- Curriculum Vitae},
+  pdfauthor = {\name},
+  pdfcreator = {\name},
+  pdfkeywords = {personal_skill_01, personal_skill_02, personal_interest_01, etc},
+  pdftitle = {\name ~- Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   % next line to avoid links from being blue and underlined
   hidelinks
@@ -100,12 +103,11 @@
   \hfill
   & \begin{minipage}{0.5\textwidth}
       \vspace{0.2\sectsep}
-      \section*{\nome}
+      \section*{\name}
       \vspace{\detsep}
-      \indirizzo \vspace{\detsep} \\
-      \href{mailto:\email}{\email} ~|~ \telefono \vspace{\detsep} \\
-      %\datadinascita ~|~ \nazionalita ~|~ \genere \vspace{\detsep} \\
-      \datadinascita ~|~ \nazionalita \vspace{\detsep} \\
+      \address \vspace{\detsep} \\
+      \href{mailto:\email}{\email} ~|~ \telephone \vspace{\detsep} \\
+      \dateofbirth ~|~ \nationality ~|~ \gender \vspace{\detsep} \\
     \end{minipage}
     %\hfill
     \begin{minipage}{0.3\textwidth}
@@ -113,13 +115,13 @@
       {\centering
       	\includegraphics[width=0.5\textwidth]{pics/portrait} \vspace{0.1cm} \\
       	% raisebox is used to center the logos vertically
-      	\raisebox{-0.5\height}{\href{\githublink}{\includegraphics[height=3.2ex]{\githublogo}}}
-      	~
-      	\raisebox{-0.5\height}{\href{\gitlablink}{\includegraphics[height=4ex]{\gitlablogo}}}
-      	~
-      	\raisebox{-0.5\height}{\href{\linkedinlink}{\includegraphics[height=3.2ex]{\linkedinlogo}}}
-      	\vspace{0.1cm}
-      	\\
+        \raisebox{-0.5\height}{\href{\githublink}{\includegraphics[height=3.2ex]{\githublogo}}}
+        ~
+        \raisebox{-0.5\height}{\href{\gitlablink}{\includegraphics[height=4ex]{\gitlablogo}}}
+        ~
+        \raisebox{-0.5\height}{\href{\linkedinlink}{\includegraphics[height=3.2ex]{\linkedinlogo}}}
+        \vspace{0.1cm}
+      \\
       }
     \end{minipage} \\
   \hline \hline
@@ -128,107 +130,101 @@
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Working Experience}
-      \subsubsection*{Senior Analog Design Engineer}
+      \subsubsection*{Position X}
       \headerrow
-  		{\textbf{Sony AVS AG} (formerly Insightness AG)}{\emph{2017 - current}}
+  		{\textbf{Company X}}{\emph{2056 - current}}
       \\
       \headerrow
-        {\emph{Wiesenstrasse 5, 8952 Schlieren, CH}}{}
+        {\emph{Address X, 0001 CityX, StateX}}{}
       \\
       \headerrow
-        {Image Sensors / Computer Vision}{}
+        {Field of Company X}{}
 
       \begin{itemize}
-          \item Analog IC design in CMOS technology
+          \item Activity 1
           \begin{itemize2}
-              \item Event-Based Image Sensor
-              \item 3D-IC
+              \item Further specify Activity 1
           \end{itemize2}
-          \item Project leading for IC design
-          \item Optical and electrical characterization
-          \item IT and network infrastructure maintenance
+          \item Activity 2
+          \item Key Responsibility 1
+          \item Key Responsibility 2
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
   %3rd row: Working experience 2
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
-      \subsubsection*{Design Engineer}
+      \subsubsection*{Position Y}
       \headerrow
-  		{\textbf{GigOptix-Helix AG} (subsidiary of GigPeak, Inc.; now Renesas Electronics Corporation)}{\emph{2013 - 2017}}
+  		{\textbf{Company Y}}{\emph{2050 - 2056}}
       \\
       \headerrow
-        {\emph{Seefeldstrasse 45, 8008 Zürich, CH}}{}
+        {\emph{Address Y, 0002 CityY, StateY}}{}
       \\
       \headerrow
-        {Opto-electronics}{}
+          {Field of Company Y}{}
 
       \begin{itemize}
-          \item High-speed analog IC design in BiCMOS technology
-          \begin{itemize2}
-              \item 28 Gbit/s TIA receivers and VCSEL drivers
-          \end{itemize2}
-          \item RF and optical measurement
-          \item Customer support, production support and RMA analysis
+          \item Activity 1
+          \item Activity 2
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
   %4th row: Working experience 3
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\sectsep}
-      \subsubsection*{Thesis Worker}
-      \headerrow
-  		{\textbf{ABB AB Corporate Research Center}}{\emph{July 2012 - December 2012}}
-      \\
-      \headerrow
-        {\emph{Forskargränd 7, 722 26 Västerås, Sweden}}{}
-      \\
-      \headerrow
-          {Power Technology Dept., Electric Power System Group}{}
-
-      \begin{itemize}
-          \item Semiconductor device modeling
-          \item Power Electronics
-      \end{itemize}
-  \end{minipage} \\[\sectsep]
+  % & \begin{minipage}{0.9\textwidth}
+  %     \vspace{\sectsep}
+    %   \subsubsection*{Position Z}
+    %   \headerrow
+ %  		{\textbf{Company Z}}{\emph{2045 - 2050}}
+    %   \\
+    %   \headerrow
+    %     {\emph{Address Z, 0003 City Z, StateZ}}{}
+    %   \\
+    %   \headerrow
+    %       {Field of Company Z}{}
+    %
+    % %   \begin{itemize}
+    % %       \item Key Responsibility 1
+    % %       \item Key Responsibility 2
+    % %   \end{itemize}
+  % \end{minipage} \\[\sectsep]
 
   %5th row: Education 1
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Education}
-      \subsubsection*{MSc in Electronic Engineering}
+      \subsubsection*{MSc in This Discipline}
       \headerrow
-  		{\textbf{Università degli Studi di Parma, Italy}}{\emph{2009 - 2013}}
+  		{\textbf{University X}}{\emph{2043 - 2045}}
       \\
       \headerrow
-        {\emph{Faculty of Engineering}}{}
+        {\emph{Faculty of This Discipline}}{}
       \\
       \headerrow
-        {Analog/Digital IC Design, Semiconductor Physics, Sensor Technology, Power Electronics}{}
+        {Field of Study 1, Field of Study 2}{}
 
       \begin{itemize}
-          \item Thesis: \emph{PSpice Modeling of 4.5 kV StakPak\textsuperscript{TM} Modules}
-          \item Grade: 107/110
+          \item Thesis: \emph{Something really difficult}
+          \item Grade: x/y
       \end{itemize}
-      \vfill
   \end{minipage} \\[\sectsep]
 
   %6th row: Education 2
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
-      \subsubsection*{BSc in Electronic Engineering}
+      \subsubsection*{BSc in That Discipline}
       \headerrow
-  		{\textbf{Università degli Studi di Parma, Italy}}{\emph{2005 - 2009}}
+  		{\textbf{University Y}}{\emph{2040 - 2043}}
       \\
       \headerrow
-        {\emph{Faculty of Engineering}}{}
+        {\emph{Faculty of That Discipline}}{}
       \\
       \headerrow
-        {Electronics, Electrotechnics, Information Technology, Controls, PCB Design}{}
+        {Field of Study 1, Field of Study 2}{}
 
       \begin{itemize}
-          \item Thesis: \emph{Experimental Characterization of a Magneto-hydrodynamic Micro-Stirrer}
-          \item Grade: 108/110
+          \item Thesis: \emph{Something quite easy}
+          \item Grade: x/y
       \end{itemize}
       \vfill
   \end{minipage} \\[\sectsep]
@@ -251,15 +247,10 @@
       \vspace{\subsectsep}
       \subsubsection*{Technical and Organizational}
       \begin{itemize}
-          \item Analog IC Design
-          \item 3D-IC
-          \item Project leading and work coordination
-          \item Full-custom analog IC layout
-          \item Electrical and optical measurements and characterization
-          \item Attitude to solve practical problems where limited standardization exists
-          \item Data analysis and elaboration
-          \item Frequently switch between different kinds of task
-          \item Explain design issues across technical domains
+          \item Technical Skill X
+          \item Social Competence Y
+          \item Managerial Skill Z
+          \item Special Competence W
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
@@ -269,9 +260,9 @@
       \subsubsection*{Computer Tools and Software Development}
       \begin{tabular*}{\textwidth}{r p{0.75\textwidth}}
         Operating Systems:&{Linux: very good knowledge\newline Microsoft Windows: good knowledge}\\[0.5ex]
-        Electronic CAD:&Cadence DFII (Virtuoso, Spectre), Mentor TannerTools, Mentor Calibre, Mentor AFS, SPICE, Cadence OrCAD (PSpice)\\[0.5ex]
-        Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{arial}\selectfont\LaTeX}\\[0.5ex]
-        Version Control:&Git, Subversion, ClioSoft SOS
+        Electronic CAD:&Cadence DFII (Virtuoso, Spectre), SPICE, Cadence OrCAD (PSpice), Cadence SoC Encounter, Agilent ADS\\[0.5ex]
+        Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{cmr}\selectfont\LaTeX}\\[0.5ex]
+        Version Control:&Subversion, Git
       \end{tabular*}\\
   \end{minipage} \\[\sectsep]
 
@@ -280,8 +271,9 @@
       \vspace{\subsectsep}
       \subsubsection*{Others}
       \begin{itemize}
-          \item Good photo-editing and computer drawing skills
-          \item Hand-working: good familiarity with tools and instruments for building electronic systems; basic skills in the use of main mechanic hand-tools and power-tools
+          \item Amateur Skill 1
+          \item Hobby Competence 2
+          \item Driving License: Category X
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
@@ -290,10 +282,8 @@
       \vspace{\subsectsep}
       \subsubsection*{Personal Interests}
       \begin{itemize}
-          \item Photography
-          \item Love for traveling
-          \item Archery
-          \item Love for the mountains (particularly, hiking and MTB)
+          \item Blue skies
+          \item Sweet fruits
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
@@ -302,9 +292,8 @@
       \vspace{\subsectsep}
       \subsubsection*{Annexes}
       \begin{itemize}
-          \item Appendix including patents, publications and references
-          \item Reference letters (\emph{Arbeitszeugnisse}) by former managers available upon request
-          \item Personal website: \href{\sito}{\sito}
+          \item Appendix including some more boring specs
+          \item Reference letter by Mr He
       \end{itemize}
       \vfill
     \end{minipage} \\
