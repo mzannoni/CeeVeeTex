@@ -30,6 +30,9 @@
 \def\recruiter{The Recruiter}
 \def\companyaddress{Somestreet, 1 \newline 0000 City \newline Country}
 
+% Application details
+\def\lettersubject{Subject: Application for this position}
+
 % Edit PDF file properties
 \hypersetup{
   pdfauthor = {\name},
@@ -45,9 +48,19 @@
 \signature{\name}
 \address{\addrs}
 
+% the following 2 params affect the layout of the closing:
+%
+% this one keeps the closing all to the left
+% \longindentation=0pt
+% this one sets the vertical space between salutation and signature
+% \medskipamount=0.2\parskip
+
 \begin{document}
-  %\begin{letter}{\recruiter \newline \company \newline \companyaddress}
-  \begin{letter}{}
+  \begin{letter}{\recruiter \\ \company \\ \companyaddress \\ ~ \\ \textbf{\lettersubject}}
+  % or if no addressee is needed:
+  % \begin{letter}{\textbf{\lettersubject}}
+  % and without even a subject line:
+  % \begin{letter}{}
 
   \opening{To the kind attention of \recruiter ~in \company}
 
