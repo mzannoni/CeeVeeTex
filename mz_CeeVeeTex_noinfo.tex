@@ -55,7 +55,7 @@
 \hypersetup{
   pdfauthor = {\nome},
   pdfcreator = {\nome},
-  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, image sensors, engineering},
+  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, image sensors, engineering, semiconductors, silicon process},
   pdftitle = {\nome ~- Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   % next line to avoid links from being blue and underlined
@@ -93,6 +93,11 @@
   \end{list}
 }
 
+\AtEndDocument{
+  \vfill
+  \rightline{\footnotesize \textit{updated: \today}}
+}
+
 \begin{document}
   \begin{longtable}{r || l}
 
@@ -106,8 +111,10 @@
       \href{mailto:\email}{\email} ~|~ \telefono \vspace{\detsep} \\
       \datadinascita ~|~ \nazionalita ~|~ \genere \vspace{\detsep} \\
       %\datadinascita ~|~ \nazionalita \vspace{\detsep} \\
+      %\vspace{0.6\detsep}
+      \\
     \end{minipage}
-    %\hfill
+    \hfill
     \begin{minipage}{0.3\textwidth}
       \vspace{0.4cm}
       {\centering
@@ -145,8 +152,8 @@
               \item 3D-IC
           \end{itemize2}
           \item Project leading for IC design
+          \item Sensor modeling for simulation and machine learning
           \item Optical and electrical characterization
-          \item IT and network infrastructure maintenance
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
@@ -253,13 +260,13 @@
       \begin{itemize}
           \item Analog IC Design
           \item 3D-IC
-          \item Project leading and work coordination
           \item Full-custom analog IC layout
-          \item Electrical and optical measurements and characterization
-          \item Effective problem-solving approach in non-standard context
-          \item Data analysis and elaboration
-          \item Frequently switch between different kinds of task
-          \item Explain design issues across technical domains
+          \item Project leading
+          \item Fundamentals of machine learning and deep learning
+          \item Problem-solving in non-standard context
+          \item Data analysis
+          \item Strong technical skill in interdisciplinary domains
+          \item Electrical and optical measurements
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
@@ -268,9 +275,9 @@
       \vspace{\subsectsep}
       \subsubsection*{Computer Tools and Software Development}
       \begin{tabular*}{\textwidth}{r p{0.75\textwidth}}
-        Operating Systems:&{Linux: very good knowledge\newline Microsoft Windows: good knowledge}\\[0.5ex]
-        Electronic CAD:&Cadence DFII (Virtuoso, Spectre), Mentor TannerTools, Mentor Calibre, Mentor AFS, SPICE, Cadence OrCAD (PSpice)\\[0.5ex]
-        Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{arial}\selectfont\LaTeX}\\[0.5ex]
+        Operating Systems:&{Linux: very good knowledge\newline Microsoft Windows: good knowledge}\vspace{0.5ex}\\[0.5ex]
+        Electronic CAD:&Cadence DFII (Virtuoso, Spectre), Mentor TannerTools, Mentor Calibre, Mentor AFS, SPICE, Cadence OrCAD (PSpice)\vspace{0.5ex}\\[0.5ex]
+        Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{arial}\selectfont\LaTeX}\vspace{0.5ex}\\[0.5ex]
         Version Control:&Git, Subversion, ClioSoft SOS
       \end{tabular*}\\
   \end{minipage} \\[\sectsep]
