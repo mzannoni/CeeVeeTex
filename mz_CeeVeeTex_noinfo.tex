@@ -4,10 +4,15 @@
 
 \documentclass[a4paper]{article}
 \usepackage{graphicx}
-\usepackage[top=2.4cm, bottom=2.4cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=2cm, bottom=1.6cm, left=2cm, right=2cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage[english]{babel}
+
+% these 3 are needed to add some meta info to the footer
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{refcount}
 
 %% set the font family
 \usepackage[condensed,math]{kurier}
@@ -65,14 +70,14 @@
 % Format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
+    #1 &
+    #2 \\
 \end{tabular*}}
 
 % Make lists with diamonds and compact spacing
 \renewenvironment{itemize}{
   \begin{list}{$\diamond$}{
-    \setlength{\topsep}{0.25em}
+    \setlength{\topsep}{0.1em}
     \setlength{\itemsep}{0em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0em}
@@ -84,7 +89,7 @@
 % Make lists with small dots and compact spacing
 \newenvironment{itemize2}{
   \begin{list}{$\cdot$}{
-    \setlength{\topsep}{0.25em}
+    \setlength{\topsep}{0.1em}
     \setlength{\itemsep}{0em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0em}
@@ -93,9 +98,15 @@
   \end{list}
 }
 
-\AtEndDocument{
-  \vfill
-  \rightline{\footnotesize \textit{updated: \today}}
+% edit the footer to add some meta info
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\thepage}
+\fancyfoot[R]{
+  \ifnum\value{page}=\getpagerefnumber{LastPage}
+    \footnotesize\textit{updated: \today}
+  \fi
 }
 
 \begin{document}
@@ -109,25 +120,15 @@
       \vspace{\detsep}
       \indirizzo \vspace{\detsep} \\
       \href{mailto:\email}{\email} ~|~ \telefono \vspace{\detsep} \\
-      \datadinascita ~|~ \nazionalita ~|~ \genere \vspace{\detsep} \\
-      %\datadinascita ~|~ \nazionalita \vspace{\detsep} \\
-      %\vspace{0.6\detsep}
+      \datadinascita ~|~ \nazionalita ~|~ \genere \vspace{0.8\detsep} \\
+      % raisebox is used to center the logos vertically
+      \raisebox{-0.5\height}{\href{\githublink}{\includegraphics[height=3.2ex]{\githublogo}}}
+      ~
+      \raisebox{-0.5\height}{\href{\gitlablink}{\includegraphics[height=4.4ex]{\gitlablogo}}}
+      ~
+      \raisebox{-0.5\height}{\href{\linkedinlink}{\includegraphics[height=3.2ex]{\linkedinlogo}}}
+      \vspace{0.4\detsep}
       \\
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.3\textwidth}
-      \vspace{0.4cm}
-      {\centering
-      	\includegraphics[width=0.5\textwidth]{pics/portrait} \vspace{0.1cm} \\
-      	% raisebox is used to center the logos vertically
-      	\raisebox{-0.5\height}{\href{\githublink}{\includegraphics[height=3.2ex]{\githublogo}}}
-      	~
-      	\raisebox{-0.5\height}{\href{\gitlablink}{\includegraphics[height=4ex]{\gitlablogo}}}
-      	~
-      	\raisebox{-0.5\height}{\href{\linkedinlink}{\includegraphics[height=3.2ex]{\linkedinlogo}}}
-      	\vspace{0.1cm}
-      	\\
-      }
     \end{minipage} \\
   \hline \hline
 
@@ -135,34 +136,56 @@
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Working Experience}
-      \subsubsection*{Senior Analog Design Engineer}
+      \subsubsection*{Lead Engineer}
       \headerrow
-  		{\textbf{Sony AVS AG} (formerly Insightness AG)}{\emph{2017 - current}}
+        {\textbf{Riverkin AG}}{\emph{2025 - current}}
       \\
       \headerrow
-        {\emph{Wiesenstrasse 5, 8952 Schlieren, CH}}{}
+        {\emph{c/o ETH Zürich, Laura-Hezner-Weg 7, 8093 Zürich, CH}}{}
       \\
       \headerrow
-        {Image Sensors / Computer Vision}{}
+        {Sensor Networks for Water Monitoring}{}
 
       \begin{itemize}
-          \item Analog IC design in CMOS technology
-          \begin{itemize2}
-              \item Event-Based Image Sensor
-              \item 3D-IC
-          \end{itemize2}
-          \item Project leading for IC design
-          \item Sensor modeling for simulation and machine learning
-          \item Optical and electrical characterization
+          \item Technology Development and Production Scaling
+          \item Engineering Team Lead
+          \item Project Management
+          \item Hardware and Firmware Development
+          \item Cloud and Data Infrastructure
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
   %3rd row: Working experience 2
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
+      \subsubsection*{Senior Analog Design Engineer}
+      \headerrow
+        {\textbf{Sony AVS AG} (formerly Insightness AG)}{\emph{2017 - 2025}}
+      \\
+      \headerrow
+        {\emph{Wiesenstrasse 5, 8952 Schlieren, CH}}{}
+      \\
+      \headerrow
+      {Image Sensors / Computer Vision}{}
+      
+      \begin{itemize}
+        \item Analog IC design in CMOS technology
+        \begin{itemize2}
+            \item Event-Based Image Sensor
+            \item 3D-IC
+        \end{itemize2}
+        \item Project leading for IC design
+        \item Sensor modeling for simulation and machine learning
+        \item Optical and electrical characterization
+      \end{itemize}
+  \end{minipage} \\[\sectsep]
+
+  %4th row: Working experience 3
+  & \begin{minipage}{0.9\textwidth}
+      \vspace{\subsectsep}
       \subsubsection*{Design Engineer}
       \headerrow
-  		{\textbf{GigOptix-Helix AG} (subsidiary of GigPeak, Inc.; now Renesas Electronics Corporation)}{\emph{2013 - 2017}}
+        {\textbf{GigOptix-Helix AG} (subsidiary of GigPeak, Inc.; now Renesas Electronics Corporation)}{\emph{2013 - 2017}}
       \\
       \headerrow
         {\emph{Seefeldstrasse 45, 8008 Zürich, CH}}{}
@@ -180,12 +203,12 @@
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
-  %4th row: Working experience 3
+  %5th row: Working experience 4
   & \begin{minipage}{0.9\textwidth}
-      \vspace{\sectsep}
+      \vspace{\subsectsep}
       \subsubsection*{Thesis Worker}
       \headerrow
-  		{\textbf{ABB AB Corporate Research Center}}{\emph{July 2012 - December 2012}}
+        {\textbf{ABB AB Corporate Research Center}}{\emph{July 2012 - December 2012}}
       \\
       \headerrow
         {\emph{Forskargränd 7, 722 26 Västerås, Sweden}}{}
@@ -197,15 +220,16 @@
           \item Semiconductor device modeling
           \item Power Electronics
       \end{itemize}
+      \vspace{1ex}
   \end{minipage} \\[\sectsep]
 
-  %5th row: Education 1
+  %6th row: Education 1
   & \begin{minipage}{0.9\textwidth}
-      \vspace{\sectsep}
+      \vspace{0.5\sectsep}
       \subsection*{Education}
       \subsubsection*{MSc in Electronic Engineering}
       \headerrow
-  		{\textbf{Università degli Studi di Parma, Italy}}{\emph{2009 - 2013}}
+        {\textbf{Università degli Studi di Parma, Italy}}{\emph{2009 - 2013}}
       \\
       \headerrow
         {\emph{Faculty of Engineering}}{}
@@ -220,12 +244,12 @@
       \vfill
   \end{minipage} \\[\sectsep]
 
-  %6th row: Education 2
+  %7th row: Education 2
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
       \subsubsection*{BSc in Electronic Engineering}
       \headerrow
-  		{\textbf{Università degli Studi di Parma, Italy}}{\emph{2005 - 2009}}
+        {\textbf{Università degli Studi di Parma, Italy}}{\emph{2005 - 2009}}
       \\
       \headerrow
         {\emph{Faculty of Engineering}}{}
@@ -240,7 +264,7 @@
       \vfill
   \end{minipage} \\[\sectsep]
 
-  %7th row: Personal skills and competences
+  %8th row: Personal skills and competences
   & \begin{minipage}{0.9\textwidth}
       \vspace{\sectsep}
       \subsection*{Skills and Competences}
@@ -249,28 +273,27 @@
         \textbf{Italian:}&Native\\
         \textbf{English:}&Fluent\\
         \textbf{German:}&Beginner/Intermediate\\
-      \end{tabular} \vspace{1.5ex} \\
-      %\hspace*{0.5em} {\footnotesize \emph{See Common European Framework (CEF) self-assessment table in the appendix.}}
+      \end{tabular} \\
     \end{minipage} \\[\sectsep]
 
-  %8th row: Technical skills and competences
+  %9th row: Technical skills and competences
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
       \subsubsection*{Technical and Organizational}
       \begin{itemize}
-          \item Analog IC Design
-          \item 3D-IC
-          \item Full-custom analog IC layout
-          \item Project leading
-          \item Fundamentals of machine learning and deep learning
+          \item Project management
+          \item Engineering team lead
+          \item Electromagnetic Physics and technical implementations
+          \item Hardware and firmware development
+          \item Technology understanding in interdisciplinary domains
           \item Problem-solving in non-standard context
-          \item Data analysis
-          \item Strong technical skill in interdisciplinary domains
+          \item Analog IC design and semiconductor technology
+          \item Fundamentals of machine learning and deep learning
           \item Electrical and optical measurements
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
-  %9th row: Computer skills and competences
+  %10th row: Computer skills and competences
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
       \subsubsection*{Computer Tools and Software Development}
@@ -282,7 +305,7 @@
       \end{tabular*}\\
   \end{minipage} \\[\sectsep]
 
-  %10th row: Other skills and competences
+  %11th row: Other skills and competences
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
       \subsubsection*{Others}
@@ -292,19 +315,19 @@
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
-  %11th row: Personal Interests
+  %12th row: Personal Interests
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
       \subsubsection*{Personal Interests}
       \begin{itemize}
           \item Photography
-          \item Love for traveling
+          \item Love for travelling
           \item Archery
           \item Love for the mountains (particularly, hiking and MTB)
       \end{itemize}
   \end{minipage} \\[\sectsep]
 
-  %12th row: Annexes
+  %13th row: Annexes
   & \begin{minipage}{0.9\textwidth}
       \vspace{\subsectsep}
       \subsubsection*{Annexes}
