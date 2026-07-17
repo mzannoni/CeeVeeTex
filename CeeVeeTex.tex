@@ -56,14 +56,14 @@
 % Format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
+    #1 &
+    #2 \\
 \end{tabular*}}
 
 % Make lists with diamonds and compact spacing
 \renewenvironment{itemize}{
   \begin{list}{$\diamond$}{
-    \setlength{\topsep}{0.25em}
+    \setlength{\topsep}{0.1em}
     \setlength{\itemsep}{0em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0em}
@@ -75,7 +75,7 @@
 % Make lists with small dots and compact spacing
 \newenvironment{itemize2}{
   \begin{list}{$\cdot$}{
-    \setlength{\topsep}{0.25em}
+    \setlength{\topsep}{0.1em}
     \setlength{\itemsep}{0em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0em}
@@ -96,13 +96,6 @@
       \address \vspace{\detsep} \\
       \href{mailto:\email}{\email} ~|~ \telephone \vspace{\detsep} \\
       \dateofbirth ~|~ \nationality ~|~ \gender \vspace{\detsep} \\
-    \end{minipage}
-    %\hfill
-    \begin{minipage}{0.3\textwidth}
-      \vspace{0.4cm}
-      {\centering \includegraphics[width=0.5\textwidth]{pics/portrait} \vspace{0.2cm} \\
-       %\dateofbirth ~||~ \nationality  ~||~ \gender \vspace{0.2cm} \\ % put details below the photo
-      }
     \end{minipage} \\
   \hline \hline
 
@@ -136,7 +129,7 @@
       \vspace{\subsectsep}
       \subsubsection*{Position Y}
       \headerrow
-  		{\textbf{Company Y}}{\emph{2050 - 2056}}
+        {\textbf{Company Y}}{\emph{2050 - 2056}}
       \\
       \headerrow
         {\emph{Address Y, 0002 CityY, StateY}}{}
@@ -152,10 +145,10 @@
 
   %4th row: Working experience 3
   % & \begin{minipage}{0.9\textwidth}
-  %     \vspace{\sectsep}
+  %     \vspace{\subsectsep}
     %   \subsubsection*{Position Z}
     %   \headerrow
- %  		{\textbf{Company Z}}{\emph{2045 - 2050}}
+ %          {\textbf{Company Z}}{\emph{2045 - 2050}}
     %   \\
     %   \headerrow
     %     {\emph{Address Z, 0003 City Z, StateZ}}{}
@@ -175,7 +168,7 @@
       \subsection*{Education}
       \subsubsection*{MSc in This Discipline}
       \headerrow
-  		{\textbf{University X}}{\emph{2043 - 2045}}
+        {\textbf{University X}}{\emph{2043 - 2045}}
       \\
       \headerrow
         {\emph{Faculty of This Discipline}}{}
@@ -194,7 +187,7 @@
       \vspace{\subsectsep}
       \subsubsection*{BSc in That Discipline}
       \headerrow
-  		{\textbf{University Y}}{\emph{2040 - 2043}}
+        {\textbf{University Y}}{\emph{2040 - 2043}}
       \\
       \headerrow
         {\emph{Faculty of That Discipline}}{}

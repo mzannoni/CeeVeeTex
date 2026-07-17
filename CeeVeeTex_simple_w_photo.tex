@@ -34,23 +34,9 @@
 \def\gender{they\,/\,them}
 \def\address{Mystreet, 1 \newline 0123 MyCity \newline MyCountry}
 
-% Web links and logos
-\def\githublink{https://github.com}
-\def\gitlablink{https://gitlab.com}
-\def\linkedinlink{https://linkedin.com}
-% Official logos are not included in the repo, they can be found at the following links:
-% GitHub: https://github.com/logos
-\def\githublogo{pics/github-mark/github-mark.png}
-% GitLab: https://about.gitlab.com/press/press-kit/#logos-rgb
-\def\gitlablogo{pics/gitlab-logo/gitlab-logo-600.png}
-% LinkedIn: https://brand.linkedin.com/downloads (black version created according to LinkedIn Logo Guidelines)
-\def\linkedinlogo{pics/linkedin-logo/LI-In-Bug-black.png}
-
 % Define some lengths used in the document
 \newlength{\sectsep}
 \setlength{\sectsep}{0.6cm}
-\newlength{\subsectsep}
-\setlength{\subsectsep}{0.4cm}
 \newlength{\detsep}
 \setlength{\detsep}{0.4cm}
 
@@ -97,32 +83,26 @@
 }
 
 \begin{document}
-  \begin{longtable}{r || l}
 
-  % 1st row: Title, details and photo
-  \hfill
-  & \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.5\textwidth}
       \vspace{0.2\sectsep}
       \section*{\name}
       \vspace{\detsep}
       \address \vspace{\detsep} \\
       \href{mailto:\email}{\email} ~|~ \telephone \vspace{\detsep} \\
-      \dateofbirth ~|~ \nationality ~|~ \gender \\
+      \dateofbirth ~|~ \nationality ~|~ \gender \vspace{\detsep} \\
+    \end{minipage}
+    \hspace{0.05\textwidth}
+    \begin{minipage}{0.3\textwidth}
+      \vspace{0.4cm}
+      {\centering \includegraphics[width=0.5\textwidth]{pics/portrait} \vspace{0.2cm} \\
+       %\dateofbirth ~||~ \nationality  ~||~ \gender \vspace{0.2cm} \\
+      }
+    \end{minipage}
 
-      % raisebox is used to center the logos vertically
-      \raisebox{-0.5\height}{\href{\githublink}{\includegraphics[height=3.2ex]{\githublogo}}}
-      ~
-      \raisebox{-0.5\height}{\href{\gitlablink}{\includegraphics[height=4ex]{\gitlablogo}}}
-      ~
-      \raisebox{-0.5\height}{\href{\linkedinlink}{\includegraphics[height=3.2ex]{\linkedinlogo}}}
-      \vspace{\detsep}
-      \\
-    \end{minipage} \\
-  \hline \hline
+    \hrule %\hline
 
-  %2nd row: Working experience 1
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\sectsep}
+      %\vspace{\sectsep}
       \subsection*{Working Experience}
       \subsubsection*{Position X}
       \headerrow
@@ -143,11 +123,7 @@
           \item Key Responsibility 1
           \item Key Responsibility 2
       \end{itemize}
-  \end{minipage} \\[\sectsep]
 
-  %3rd row: Working experience 2
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
       \subsubsection*{Position Y}
       \headerrow
         {\textbf{Company Y}}{\emph{2050 - 2056}}
@@ -162,11 +138,7 @@
           \item Activity 1
           \item Activity 2
       \end{itemize}
-  \end{minipage} \\[\sectsep]
 
-  %4th row: Working experience 3
-  % & \begin{minipage}{0.9\textwidth}
-  %     \vspace{\sectsep}
     %   \subsubsection*{Position Z}
     %   \headerrow
  %          {\textbf{Company Z}}{\emph{2045 - 2050}}
@@ -181,11 +153,8 @@
     % %       \item Key Responsibility 1
     % %       \item Key Responsibility 2
     % %   \end{itemize}
-  % \end{minipage} \\[\sectsep]
 
-  %5th row: Education 1
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\sectsep}
+      %\vspace{\sectsep}
       \subsection*{Education}
       \subsubsection*{MSc in This Discipline}
       \headerrow
@@ -201,11 +170,7 @@
           \item Thesis: \emph{Something really difficult}
           \item Grade: x/y
       \end{itemize}
-  \end{minipage} \\[\sectsep]
 
-  %6th row: Education 2
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
       \subsubsection*{BSc in That Discipline}
       \headerrow
         {\textbf{University Y}}{\emph{2040 - 2043}}
@@ -221,11 +186,8 @@
           \item Grade: x/y
       \end{itemize}
       \vfill
-  \end{minipage} \\[\sectsep]
 
-  %7th row: Personal skills and competences
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\sectsep}
+      %\vspace{0.2\sectsep}
       \subsection*{Skills and Competences}
       \subsubsection*{Languages}
       \begin{tabular}{rl}
@@ -234,11 +196,7 @@
         \textbf{German:}&Beginner/Intermediate\\
       \end{tabular} \vspace{1.5ex} \\
       %\hspace*{0.5em} {\footnotesize \emph{See Common European Framework (CEF) self-assessment table in the appendix.}}
-    \end{minipage} \\[\sectsep]
 
-  %8th row: Technical skills and competences
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
       \subsubsection*{Technical and Organizational}
       \begin{itemize}
           \item Technical Skill X
@@ -246,11 +204,7 @@
           \item Managerial Skill Z
           \item Special Competence W
       \end{itemize}
-  \end{minipage} \\[\sectsep]
 
-  %9th row: Computer skills and competences
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
       \subsubsection*{Computer Tools and Software Development}
       \begin{tabular*}{\textwidth}{r p{0.75\textwidth}}
         Operating Systems:&{Linux: very good knowledge\newline Microsoft Windows: good knowledge}\\[0.5ex]
@@ -258,39 +212,26 @@
         Programming:&Python, C/C++, Matlab/Octave, shell scripting, VHDL, Verilog/VerilogA, {\fontfamily{cmr}\selectfont\LaTeX}\\[0.5ex]
         Version Control:&Subversion, Git
       \end{tabular*}\\
-  \end{minipage} \\[\sectsep]
 
-  %10th row: Other skills and competences
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
       \subsubsection*{Others}
       \begin{itemize}
           \item Amateur Skill 1
           \item Hobby Competence 2
           \item Driving License: Category X
       \end{itemize}
-  \end{minipage} \\[\sectsep]
 
-  %11th row: Personal Interests
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
       \subsubsection*{Personal Interests}
       \begin{itemize}
           \item Blue skies
           \item Sweet fruits
       \end{itemize}
-  \end{minipage} \\[\sectsep]
 
-  %12th row: Annexes
-  & \begin{minipage}{0.9\textwidth}
-      \vspace{\subsectsep}
+
       \subsubsection*{Annexes}
       \begin{itemize}
           \item Appendix including some more boring specs
           \item Reference letter by Mr He
       \end{itemize}
       \vfill
-    \end{minipage} \\
 
-  \end{longtable}
 \end{document}

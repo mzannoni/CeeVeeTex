@@ -1,10 +1,43 @@
 # Latex generated files
+## Compilation/build artifacts
 *.aux
 *.fdb_latexmk
-*fls
+*.fls
 *.log
 *.out
 *.synctex.gz
+*.dvi
+*.xdv
+*.ps
+*.toc
+*.lof
+*.lot
+*.figlist
+*.makefile
+*.auxlock
+
+## Bibliography (biblatex/biber, bibtex)
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+## Index and glossary
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.ist
+*.acn
+*.acr
+*.alg
+
+## Beamer
+*.nav
+*.snm
+*.vrb
 
 # Logo folders
 pics/github-mark
