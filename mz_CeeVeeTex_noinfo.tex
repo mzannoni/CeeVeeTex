@@ -32,21 +32,24 @@
 
 % Personal details
 \def\nome{Massimo Zannoni}
-\def\email{myemail@someservice.abc}
-\def\telefono{+00 11 22 33 44}
-\def\nazionalita{Italian}
-\def\datadinascita{00.00.1900}
+\def\email{bill\_on\_github@fotobill.com}
+%\def\telefono{+00 11 22 33 44}
+%\def\nazionalita{Country}
+%\def\datadinascita{00.00.1900}
 \def\genere{he\,/\,him}
-\def\indirizzo{Squarestreet, 1 \newline 0000 Zürich \newline CH}
+%\def\indirizzo{Squarestreet, 1 \newline 0000 Zürich \newline CH}
+\def\indirizzo{Zürich~-~CH}
 \def\sito{https://www.fotobill.com}
 
 % Web links and logos
 \def\githublink{https://github.com/mzannoni}
 \def\gitlablink{https://gitlab.com/mzannoni}
 \def\linkedinlink{https://www.linkedin.com/in/mzannoni}
+\def\fotobilllink{https://fotobill.com}
 \def\githublogo{pics/github-mark/github-mark.png}
 \def\gitlablogo{pics/gitlab-logo/gitlab-logo-600.png}
-\def\linkedinlogo{pics/linkedin-logo/LI-In-Bug-black.png}
+\def\linkedinlogo{pics/linkedin-logo/LI-In-Bug_black.png}
+\def\fotobilllogo{pics/fotobill-logo/fotobill_logo_simple_sq.png}
 
 % Define some lengths used in the document
 \newlength{\sectsep}
@@ -60,7 +63,7 @@
 \hypersetup{
   pdfauthor = {\nome},
   pdfcreator = {\nome},
-  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, image sensors, engineering, semiconductors, silicon process},
+  pdfkeywords = {electronics, IC design, RF measurement, optoelectronics, image sensors, engineering, semiconductors, silicon process, EDA tools},
   pdftitle = {\nome ~- Curriculum Vitae},
   pdfsubject = {Curriculum Vitae},
   % next line to avoid links from being blue and underlined
@@ -119,14 +122,16 @@
       \section*{\nome}
       \vspace{\detsep}
       \indirizzo \vspace{\detsep} \\
-      \href{mailto:\email}{\email} ~|~ \telefono \vspace{\detsep} \\
-      \datadinascita ~|~ \nazionalita ~|~ \genere \vspace{0.8\detsep} \\
+      \href{mailto:\email}{\email}\vspace{\detsep} \\
+      \genere \vspace{0.8\detsep} \\
       % raisebox is used to center the logos vertically
       \raisebox{-0.5\height}{\href{\githublink}{\includegraphics[height=3.2ex]{\githublogo}}}
       ~
       \raisebox{-0.5\height}{\href{\gitlablink}{\includegraphics[height=4.4ex]{\gitlablogo}}}
       ~
       \raisebox{-0.5\height}{\href{\linkedinlink}{\includegraphics[height=3.2ex]{\linkedinlogo}}}
+      ~
+      \raisebox{-0.5\height}{\href{\fotobilllink}{\includegraphics[height=4.4ex]{\fotobilllogo}}}
       \vspace{0.4\detsep}
       \\
     \end{minipage} \\
@@ -138,7 +143,7 @@
       \subsection*{Working Experience}
       \subsubsection*{Lead Engineer}
       \headerrow
-        {\textbf{Riverkin AG}}{\emph{2025 - current}}
+        {\textbf{Riverkin AG}}{\emph{2025 - 2026}}
       \\
       \headerrow
         {\emph{c/o ETH Zürich, Laura-Hezner-Weg 7, 8093 Zürich, CH}}{}
